@@ -1,0 +1,211 @@
+-- Inserts para la Base de Datos
+
+--------- CONSOLA BD ---------
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Zona ~~~~~~~~~~~~~~~~~~~~~~~
+
+INSERT INTO Zona (Nombre) VALUES 
+('Álvaro Obregón'), 
+('Azcapotzalco'),
+('Barrientos'),
+('Benito Juárez'), 
+('Ciudad Satélite'),
+('Coyoacán'), 
+('Cuajimalpa de Morelos'), 
+('Cuauhtémoc'), 
+('Gustavo A. Madero'), 
+('Iztacalco'), 
+('Iztapalapa'), 
+('La Magdalena Contreras'),
+('Lago de Guadalupe'),
+('Los Bastones'),
+('Lomas Verdes, Primera Sección'),
+('Lomas Verdes, Segunda Sección'),
+('Lomas Verdes, Tercera Sección'),
+('Lomas Verdes, Cuarta Sección'),
+('Miguel Hidalgo'), 
+('Milpa Alta'), 
+('Tláhuac'), 
+('Tlalpan'),
+('Tlanepantla de Baz'),
+('Venustiano Carranza'), 
+('Xochimilco');
+
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Paquete ~~~~~~~~~~~~~~~~~~~~~~~
+
+INSERT INTO Paquete (Nombre, Precio) VALUES 
+('Telefonía', 499.99),
+('IzziTv', 550.50), 
+('IzzInternet 60M', 569.99),
+('IzzInternet 125M', 859.99),
+('IzzInternet 200M', 939.99);
+
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Incidencia ~~~~~~~~~~~~~~~~~~~~~~~
+
+INSERT INTO Incidencia (Nombre) VALUES 
+('Transformador roto'), 
+('No conexión'), 
+('Módem roto'), 
+('Cable suelto, en calle'), 
+('Perro mordió cable'),
+('Interferencia en la señal de TV'), 
+('Línea telefónica con ruido'), 
+('Velocidad de internet baja'), 
+('Corte intermitente de servicio'), 
+('No hay tono en la línea telefónica'), 
+('Canal de TV no disponible'), 
+('Problemas con la facturación'), 
+('Servicio no instalado después de la fecha prometida'), 
+('Problemas con el decodificador de TV'), 
+('Problemas con el router de internet');
+
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Empleado ~~~~~~~~~~~~~~~~~~~~~~~
+
+INSERT INTO Empleado (IdEmpleado, Rol, Nombre, ApellidoP, ApellidoM, Correo) VALUES 
+('1', 'supervisor', 'Karla', 'Cruz', 'Muñiz', 'karicm@gmail.com'), 
+('2', 'supervisor', 'Freddy', 'Azamar', 'López', 'A01798100@tec.mx'),
+
+('joahan11', 'agente', 'Javier', 'García', 'Fernández', 'A01748222@tec.mx'),
+('luisaM2', 'agente', 'Luisa', 'González', 'Martínez', 'LuisaGZ@gmail.com'),
+('paquitoS', 'agente', 'Paco', 'Ávila', 'Bautista', 'PaKoAvil@gmail.com'),
+('ferGuerra', 'agente', 'Fernanda', 'Carrión', 'Guerra', 'carrioFer@gmail.com'),
+('andyMD', 'agente', 'Andrea', 'Domínguez', 'Mejía', 'andyDom@gmail.com'),
+('torres12', 'agente', 'Julio', 'Torres', 'Vázquez', 'torres10@gmail.com'),
+('nataliu', 'agente', 'Natalia', 'Morales', 'Uscanga', 'natmora@gmail.com'),
+('delgadoC', 'agente', 'Jesús', 'Delgado', 'Chávez', 'jisusD@gmail.com'),
+('josae', 'agente', 'Andrés', 'Aguilar', 'Cabrera', 'andCabre@gmai.com');
+
+
+
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Cliente ~~~~~~~~~~~~~~~~~~~~~~~
+
+-- ('+525584016051', 'Joahancin', 'García', 'Fernández', '2000-07-23', "male", "rarauwAzul@gmail.com", 5);
+
+INSERT INTO Cliente (Celular, Nombre, ApellidoP, ApellidoM, FechaNac, Sexo, Correo, IdZona) VALUES 
+('+525540066976', 'Alfredo', 'Azamar', 'López', '2000-07-23', "male", "fred.mar@gmail.com", 5),
+('+525584016051', 'Joahancin', 'García', 'Fernández', '2000-07-23', "male", "rarauwAzul@gmail.com", 5),
+('+525513604788', 'Lore', 'Delgado', 'Mendoza', '1990-02-16', "female", "lors.del@outlook.com", 5),
+('+525516399531', 'Héctor', 'González', 'Sánchez', '1890-10-29', "male", "hgs.rt@yahoo.com", 5),
+('+525586117753', 'José Antonio', 'Moreno', 'Tahuilan', '1918-05-23', "male", "pepo_PM@gmail.com", 5),
+('+525521127409', 'Maximiliano', 'Lecona', 'Nieves', '2001-06-23', "male", "maxito.nieve@icloud.com", 6),
+
+('+525574855162', 'Eric', 'Navarro', 'Martínez', '2002-11-05', "male", "manuEricsin@outlook.com", 21),
+('+525517292933', 'Benjamín', 'Cruz', 'Cervantes', '2003-07-12', "male", "benjiewcwx@outlook.com", 8),
+('+522282127852', 'Bernardo', 'Limón', 'Montes de Oca', '2002-04-14', "male", "limonsin@yahoo.com", 8),
+('+525521044587', 'Ángel', 'Márquez', 'Curiel', '2000-10-03', "male", "angeliu@gmail.com", 8);
+
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Contrato ~~~~~~~~~~~~~~~~~~~~~~~
+
+INSERT INTO Contrato (Fecha, Celular, IdPaquete) VALUES 
+('2024-02-02', '+525540066976', 4),
+('2024-02-03', '+525513604788', 1),
+('2024-02-04', '+525513604788', 2),
+('2024-02-05', '+525513604788', 5),
+('2024-03-23', '+525516399531', 3),
+('2024-03-21', '+525586117753', 1),
+('2024-03-21', '+525586117753', 4),
+('2024-03-29', '+525521127409', 1),
+('2024-03-29', '+525521127409', 3),
+('2024-03-29', '+525574855162', 4),
+('2024-03-30', '+525574855162', 2),
+('2024-03-30', '+525517292933', 1),
+('2024-04-01', '+525517292933', 2),
+('2024-03-31', '+522282127852', 2),
+('2024-03-31', '+522282127852', 3),
+('2024-03-31', '+525521044587', 5);
+
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Reporte ~~~~~~~~~~~~~~~~~~~~~~~
+
+INSERT INTO Reporte (FechaHora, Prioridad, Descripcion, IdZona, Celular, IdEmpleado, IdIncidencia) VALUES 
+('2024-05-05 20:12:23', 'alta', 'El transformador de la calle Lago se rompió', 3, '+525540066976', 'joahan11', 1),
+('2024-05-28 15:12:23', 'media', 'No hay conexión por múltiples días', 5, '+525516399531', 'luisaM2', 2);
+
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Soluciones ~~~~~~~~~~~~~~~~~~~~~~~
+
+INSERT INTO SolucionBase (Nombre, Asunto) VALUES 
+('Requiere técnico', 'soporte'),
+('Se presentó incidencia', 'soporte'),
+('Check modem connections', 'internet'),
+('Reboot the modem', 'internet'),
+('Check modem LED indications', 'internet'),
+('Move the modem to another location', 'internet'),
+('Use the Ethernet cable to test the connection', 'internet'),
+('Reiniciar el teléfono', 'telefonia'),
+('Verificar señal', 'telefonia'),
+('Checar Conexiones decodificador', 'television'),
+('Checar señal decodificador', 'television');
+
+INSERT INTO Pasos (Descripcion, IdSolucion) VALUES 
+('Locate modem', 3),
+('Check if modem is connected', 3),
+('Inspect LED lights from modem', 3),
+('Unplugg, wait 30 sec, plug back in', 3),
+('Locate the modem', 4),
+('Find small slot labeled reset', 4),
+('Press and hold the reset button', 4),
+('Check that the power LED is on', 5),
+('Check that the internet LED is on', 5),
+('Check that the Ethernet LED is on', 5),
+('Check that the Wi-Fi LED is on', 5),
+('Check if the modem at the current location is not having the necessary signal', 6),
+('Disconnect the modem cable from the light', 6),
+('Move it to a more open and central space', 6),
+('Connect the modem again', 6),
+('Locate the Ethernet cable included in your package', 7),
+('Find the Ethernet input on the modem', 7),
+('Connect the cable to the modem input', 7),
+('Connect the other end to the computer', 7),
+('Check connection', 7),
+('Apaga el teléfono', 8),
+('Espera al menos 30 segundos', 8),
+('Enciende el teléfono', 8),
+('Asegúrate de que tienes buena señal', 9),
+('Si la señal es débil, intenta moverte a un lugar con mejor señal', 9),
+('Asegúrate de que todos los cables estén bien conectados', 10),
+('Si hay algún cable suelto, reconéctalo', 10),
+('Asegúrate de que la caja de cable tiene buena señal', 11),
+('Si la señal es débil, intenta mover la caja de cable a un lugar con mejor señal', 11);
+
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Llamada ~~~~~~~~~~~~~~~~~~~~~~~
+
+INSERT INTO Llamada (IdLlamada, FechaHora, Notas, Estado, Sentiment, Asunto, IdEmpleado, Celular) VALUES
+('4c1d6f89-9cc4-4451-a29c-cbe3d38cfa38', '2024-06-12 7:45:37', 'no me sirve el internet', 1, 'neutral', 'internet', 'andyMD', '+525586117753'),
+('2e034c9c-83ba-4d36-aafa-d1afe5018bb1', '2024-06-12 8:55:37', 'no me sirve el módem', 1, 'positive', 'internet', 'delgadoC', '+522282127852'),
+('42016a89-a00b-428d-bc12-5ea3bb89d7fe', '2024-06-12 9:56:39', 'el control remoto no sirve', 1, 'positive', 'television', 'ferGuerra', '+525513604788'),
+('64fb44e6-cedf-41c7-a2eb-4be822b30e2c', '2024-06-12 10:58:39', 'no tengo señal', 1, 'negative', 'television', 'luisaM2', '+525516399531'),
+('03a3ce22-3a4d-4faf-9afe-e79f6a27d574', '2024-06-12 11:59:32', 'no puedo recibir llamadas', 1, 'positive', 'telefonia', 'nataliu', '+525517292933'),
+('6b5ca90d-a27c-4238-b610-b47fd7de801d', '2024-06-12 6:05:52', 'no puedo realizar llamadas', 1, 'neutral', 'telefonia', 'paquitoS', '+525521044587'),
+('b7cff977-067e-4a04-beec-85c7f490715e', '2024-06-12 12:06:22', 'No sirve el internet', 1, 'positive', 'internet', 'torres12', '+525521127409'),
+('e5f63cdb-9f6d-44a4-ba80-ae24bf4b562c', '2024-06-12 12:07:12', 'mi conexión esta lenta', 1, 'negative', 'internet', 'josae', '+525574855162');
+
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Encuesta ~~~~~~~~~~~~~~~~~~~~~~~
+
+
+INSERT INTO Encuesta (Pregunta, Calificacion, IdLlamada) VALUES
+(1, 3, "7811ce99-6f6c-45d8-9e20-071aada01b2c"),
+(2, 1, "7811ce99-6f6c-45d8-9e20-071aada01b2c"),
+(3, 1, "7811ce99-6f6c-45d8-9e20-071aada01b2c"),
+(1, 4, "call2"),
+(1, 2, "call3"),
+(1, 1, "call4"),
+(1, 3, "call5"),
+(1, 4, "call6"),
+(1, 2, "call7"),
+(1, 4, "call2"),
+(1, 4, "call2");
+
+
+-- ~~~~~~~~~~~~~~~~~~~~~~~ Notificacion ~~~~~~~~~~~~~~~~~~~~~~~
+
+
+INSERT INTO Notificacion (FechaHora, Titulo, Descripcion)
+VALUES ('2024-05-31 18:39:23', 'Calidad de Llamadas', 'Empleados recuerden cuidar la calidad de todas sus llamadas');
